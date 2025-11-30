@@ -1,1 +1,0 @@
-# Fysiikka-Yo-Kone
