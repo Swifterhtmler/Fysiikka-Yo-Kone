@@ -1,0 +1,37 @@
+<script>
+	import EditorWrapper from '$lib/components/EditorWrapper.svelte';
+
+	// Example questions data
+	const questions = [
+		{ id: '1', title: 'Question 1' },
+		{ id: '2', title: 'Question 2' },
+		{ id: '3', title: 'Question 3' },
+		{ id: '4', title: 'Question 4' },
+		{ id: '5', title: 'Question 5' }
+	];
+</script>
+
+<div style="max-width: 900px; margin: 0 auto; padding: 20px;">
+	<h1>Physics Exam</h1>
+
+	{#each questions as question (question.id)}
+		<div style="margin-bottom: 30px; padding: 20px; border: 1px solid #ccc; border-radius: 4px;">
+			<h3>{question.title}</h3>
+			<div style="height: 400px; margin-top: 10px;">
+				<EditorWrapper
+					editorId={`question-${question.id}`}
+					height={400}
+					imageMaxWidth={300}
+					imageMaxHeight={200}
+				/>
+			</div>
+		</div>
+	{/each}
+</div>
+
+<style>
+	:global(body) {
+		font-family: Arial, sans-serif;
+		background-color: #f5f5f5;
+	}
+</style>
