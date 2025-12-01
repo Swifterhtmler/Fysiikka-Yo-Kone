@@ -1,7 +1,8 @@
 <script lang="ts">
 	import EditorWrapper from '$lib/components/EditorWrapper.svelte';
+	import { onMount } from 'svelte';
 
-	const questions = [
+	let questions = [
 		// Section 2 - Question 2
 		{ 
 			id: 'K23 q2.0', 
@@ -1162,12 +1163,15 @@
 	];
 
 	let currentQuestionIndex = 0;
+	let completedCount = 0;
 	$: currentQuestion = questions[currentQuestionIndex];
+	$: completedCount = questions.filter(q => q.isCompleted).length;
  //  let isCorrect = false;
 	
    function checkAnswer() {
 		
 		currentQuestion.isCompleted = true;
+		saveCompletedQuestions();
 
 		if (currentQuestion.isk23 == true) {
 		window.open("https://drive.google.com/file/d/17eKbwTU-_cnZQSHAPCZHD81LxaisM_zk/view?pli=1", '_blank').focus();
@@ -1178,6 +1182,49 @@
 		} else if (currentQuestion.isK25 == true) {
          window.open("https://yle.fi/plus/abitreenit/2025/kevat/fysiikka/hvp_lopullinen.pdf", '_blank').focus();	
 		}		
+	}
+
+	// --- localStorage persistence for completed questions ---
+	/**
+	 * Save all completed question IDs to localStorage
+	 */
+	function saveCompletedQuestions() {
+		const completedIds = questions
+			.filter(q => q.isCompleted === true)
+			.map(q => q.id);
+		localStorage.setItem('completedQuestions', JSON.stringify(completedIds));
+		questions = questions;
+	}
+
+	/**
+	 * Load completed question IDs from localStorage and update the questions array
+	 */
+	function loadCompletedQuestions() {
+		const stored = localStorage.getItem('completedQuestions');
+		if (stored) {
+			try {
+				const completedIds: string[] = JSON.parse(stored);
+				for (const q of questions) {
+					if (completedIds.includes(q.id)) {
+						q.isCompleted = true;
+					}
+				}
+				questions = questions;
+			} catch (e) {
+				console.error('Error loading completed questions:', e);
+			}
+		}
+	}
+
+	/**
+	 * Clear all completed question tracking from localStorage
+	 */
+	function clearCompletedQuestions() {
+		localStorage.removeItem('completedQuestions');
+		for (const q of questions) {
+			q.isCompleted = false;
+		}
+		questions = questions;
 	}
 
 
@@ -1204,6 +1251,11 @@
 		'video-placeholder', 'iframe-placeholder', 'underline', 'subscript', 
 		'heading1', 'heading2', 'bold', 'alignCenter', 'font increment', 'undo', 'redo', 'italic'
 	];
+
+	// Load completed questions from localStorage when component mounts
+	onMount(() => {
+		loadCompletedQuestions();
+	});
 
 // --- Data export / backup helpers ---
 /**
@@ -1410,6 +1462,10 @@ async function promptAndUploadSupabase() {
 			<button type="button" class="export-btn" on:click={exportAsTxt}>Export TXT</button> -->
 			<button type="button" class="export-btn" on:click={exportEditorContentsAsJSON}>Export JSON</button>
 			<button type="button" class="export-btn" on:click={exportEditorContentsAsTxt}>Export TXT</button>
+			<!-- <button type="button" class="export-btn" on:click={clearCompletedQuestions}>Clear Completed</button> -->
+			<span class="completion-status">
+				{completedCount}/{questions.length} completed
+			</span>
 		</div>
 	</div>
 
@@ -1722,6 +1778,7 @@ async function promptAndUploadSupabase() {
 		gap: 8px;
 		align-items: center;
 		margin-top: 8px;
+		flex-wrap: wrap;
 	}
 
 	.export-btn {
@@ -1734,6 +1791,19 @@ async function promptAndUploadSupabase() {
 		font-weight: 600;
 	}
 
+	.completion-status {
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		color: #4CAF50;
+		font-size: 0.95rem;
+		margin-left: auto;
+		padding: 8px 16px;
+		background-color: #f1f8f4;
+		border-radius: 4px;
+		border: 1px solid #4CAF50;
+	}
+/* 
 
 	.content-menu-top-bar-container {
 		background-color: #e1e7e2;
@@ -1764,7 +1834,7 @@ async function promptAndUploadSupabase() {
 		color: white;
 		border-radius: 5px;
 		padding: 5px;
-	}
+	} */
 
 
 	.export-btn:hover {
