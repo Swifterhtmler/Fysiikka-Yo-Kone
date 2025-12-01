@@ -1412,6 +1412,66 @@ async function promptAndUploadSupabase() {
 }
 </script>
 
+
+
+
+
+
+
+
+<svelte:head>
+  <meta charset="UTF-8" />
+
+    <meta name="description" content="Fysiikan Yo kone on suunniteltu fysiikan yo kirjoittajille ja toimii abitreenien yokoneen tavoin mutta tukee myös LaTeX ladontaa.">
+
+    <meta name="keywords" content="Yokokeet, Abitreenit, YoKone,Yo kone, yo kone, fysiikka, fysiikan yo koe, fysiikan luku, fysiikak yo kertaus, mafynetti, maol, fysiikan kertaus, ">
+    <meta property="og:title" content="Fysiikan ylioppilaskoe treeni">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Fysiikan ylioppilaskoe treenaus yo koe koneen avulla" />
+  
+  <!-- Google search console verification tag -->
+
+	 <meta name="google-site-verification" content="Jr9bVmoylSADwZ-Qlsqqj7XAI2Qb5p6vqM-EMFyFpWM" />
+ 
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fysiikan Yo Kone</title>
+     <link rel="icon" type="image/svg+xml" href="" />
+
+   <!--- Umami Analytics -->
+	  
+	<script defer src="https://cloud.umami.is/script.js" data-website-id="dbaa4df0-a42d-43b7-961f-56be29f47131"></script>
+
+	<!-- Speculation Rules for prerender and prefetch -->
+	<script type="speculationrules">
+		{
+			"prerender": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }],
+			"prefetch": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }]
+		}
+	</script>
+	
+
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"name": "Fysiikan Yo Kone",
+			"description": "Fysiikan ylioppilaskokeen harjoittelukone",
+			"url": "https://fysiikka-yo-kone.vercel.app"
+		}
+	</script>
+
+
+</svelte:head>
+
+
+
+
+
+
+
+
+
+
 <div class="container">
 
 	<!-- <div class="content-menu-top-bar-container">
