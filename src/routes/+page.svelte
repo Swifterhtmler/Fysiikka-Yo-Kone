@@ -1361,8 +1361,17 @@ async function promptAndUploadSupabase() {
 </script>
 
 <div class="container">
-	<h1>Fysiikan Yo Kone</h1>
+
+	<!-- <div class="content-menu-top-bar-container">
+		<button type="button" class="content-menu-top-bar-container-button-1">Pomodoro Ajastin</button>
+		<nutton type="button" class="content-menu-top-bar-container-button">Käyttöohje</nutton>
+	</div> -->
+
+	<div class="top-bar-container">
+	<h1 style="font-weight: 600;"><span style="color:rgb(40,100,200);">Fysiikan</span> Yo Kone</h1>
+	<p class="subtitle">Data tallentuu selaimen välimuistiin. Kaikki data poistuu jos välimuisti tyhjennetään.</p>
 	<p class="subtitle">Kysymys {currentQuestionIndex + 1} / {questions.length}</p>
+	</div>
 
 	<!-- Progress bar -->
 	<div class="progress-container">
@@ -1725,11 +1734,52 @@ async function promptAndUploadSupabase() {
 		font-weight: 600;
 	}
 
+
+	.content-menu-top-bar-container {
+		background-color: #e1e7e2;
+		padding: 10px;
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		justify-content: center;
+		gap: 10px;
+	}
+
+
+	.content-menu-top-bar-container-button-1 {
+		color: #413f3f;
+		background-color: #4CAF50;
+		color: white;
+		border-radius: 5px;
+      padding-bottom: 2.5px;
+		padding-top: 2.5px;
+		padding-left: 5px;
+		padding-right: 5px;
+
+	}
+
+	.content-menu-top-bar-container-button {
+		color: #413f3f;
+		background-color: #4CAF50;
+		color: white;
+		border-radius: 5px;
+		padding: 5px;
+	}
+
+
 	.export-btn:hover {
 		background: #1565c0;
 	}
 
 
+	.top-bar-container {
+		background-color: #e1e7e2;
+		width: 100%;
+		margin-top: 7px;
+		padding: 7px;
+		border-radius: 10px;
+		margin-bottom: 10px;
+	}
 
 
 </style>
