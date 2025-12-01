@@ -1,6 +1,9 @@
 <script lang="ts">
 	import EditorWrapper from '$lib/components/EditorWrapper.svelte';
+	import { GalleryHorizontal } from '@lucide/svelte';
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
+	import Pomodorotimer from './pomodorotimer.svelte';
 
 	let questions = [
 		// Section 2 - Question 2
@@ -1437,8 +1440,6 @@ async function promptAndUploadSupabase() {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Fysiikan Yo Kone</title>
 
-	<link rel="icon" type="image/png" href="/logos.png" />
-
    <!--- Umami Analytics -->
 	  
 	<script defer src="https://cloud.umami.is/script.js" data-website-id="dbaa4df0-a42d-43b7-961f-56be29f47131"></script>
@@ -1474,9 +1475,9 @@ async function promptAndUploadSupabase() {
 
 
 <div class="container">
-
-	<!-- <div class="content-menu-top-bar-container">
-		<button type="button" class="content-menu-top-bar-container-button-1">Pomodoro Ajastin</button>
+<!-- 
+	<div class="content-menu-top-bar-container">
+		<a class="content-menu-top-bar-container-timer" href="/pomodoro">Pomodoro timer</a>
 		<nutton type="button" class="content-menu-top-bar-container-button">Käyttöohje</nutton>
 	</div> -->
 
