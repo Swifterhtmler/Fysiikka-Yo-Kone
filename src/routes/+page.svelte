@@ -1471,10 +1471,8 @@ async function promptAndUploadSupabase() {
 
 
 
-
-
-
 <div class="container">
+
 <!-- 
 	<div class="content-menu-top-bar-container">
 		<a class="content-menu-top-bar-container-timer" href="/pomodoro">Pomodoro timer</a>
@@ -1526,7 +1524,7 @@ async function promptAndUploadSupabase() {
 			<button type="button" class="export-btn" on:click={exportEditorContentsAsTxt}>Export TXT</button>
 			<!-- <button type="button" class="export-btn" on:click={clearCompletedQuestions}>Clear Completed</button> -->
 			<span class="completion-status">
-				{completedCount}/{questions.length} completed
+				{completedCount}/{questions.length} Tehty
 			</span>
 		</div>
 	</div>
