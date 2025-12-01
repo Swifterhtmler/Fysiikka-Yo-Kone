@@ -1,7 +1,7 @@
 
 
 
-
+![App Screenshot](image.png)
 
 # Fysiikan Yo Kone
 
@@ -17,9 +17,6 @@ Website for finnish physics matriculation exam preparation.
 
 
 
-
-
-![App Screenshot](image.png)
 
 ## FAQ
 
