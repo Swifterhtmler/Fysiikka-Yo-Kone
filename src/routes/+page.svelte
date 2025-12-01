@@ -1434,9 +1434,10 @@ async function promptAndUploadSupabase() {
 	 <meta name="google-site-verification" content="Jr9bVmoylSADwZ-Qlsqqj7XAI2Qb5p6vqM-EMFyFpWM" />
  
    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fysiikan Yo Kone</title>
-     <link rel="icon" type="image/svg+xml" href="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Fysiikan Yo Kone</title>
+
+	<link rel="icon" type="image/png" href="/logos.png" />
 
    <!--- Umami Analytics -->
 	  
