@@ -761,6 +761,402 @@
     "description": "",
     "isK24": true,
 	 isCompleted: false
+  },
+
+  // 2025 kevät koe
+
+  {
+    "id": "K25 q2.0",
+    "title": "K25: 2. Puhelimen akun lataaminen",
+    "material": {
+      "url": "https://yle.fi/plus/abitreenit/2025/kevat/fysiikka/attachments/index.html#2",
+      "label": "2.A"
+    },
+    "description": "Fyysikko latasi puhelintaan vanhalla laturilla ja merkitsi muistiin puhelimen latausasteen eri ajanhetkillä. Puhelimen akun kapasiteetti on 3 090 mAh.",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q2.1",
+    "title": "K25: 2.1 Laske latausasteen avulla akun lataustila. Piirrä kuvaaja lataustilasta ajan funktiona. Määritä akkua lataava sähkövirta latausasteen ollessa 20–80 %.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q2.2",
+    "title": "K25: 2.2 Määritä laturin latausteho, kun laturin antama jännite on 5,0 V.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q2.3",
+    "title": "K25: 2.3 Kuinka kauan kestää ladata tabletin akku (11200 mAh) latausasteesta 20 % latausasteeseen 80 %?",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q3.0",
+    "title": "K25: 3. Hehkulamppu uppokuumentimena",
+    "material": {
+      "url": "https://yle.fi/plus/abitreenit/2025/kevat/fysiikka/attachments/index.html#3",
+      "label": "3.A, 3.B, 3.C"
+    },
+    "description": "Laite lämmittää vettä käyttäen hehkulamppua lämmitysvastuksena. Lämpötilaa mitataan tietokoneeseen liitetyllä anturilla.",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q3.1",
+    "title": "K25: 3.1 Laadi kuvaaja veden lämpötilasta ajan funktiona. Määritä sovitteen avulla veden lämpötilan muutosnopeus aikavälillä 50–200 s.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q3.2",
+    "title": "K25: 3.2 Kuinka suurella teholla lämpöenergiaa siirtyy veteen?",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q3.3",
+    "title": "K25: 3.3 Kuinka suurella hyötysuhteella laite lämmittää vettä?",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q3.4",
+    "title": "K25: 3.4 Minkä syiden vuoksi hyötysuhde ei ole 100 %? Esitä kolme syytä.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q4.0",
+    "title": "K25: 4. Heliumpallo",
+    "material": {
+      "url": "https://yle.fi/plus/abitreenit/2025/kevat/fysiikka/attachments/index.html#4",
+      "label": "4.A, 4.B, 4.C"
+    },
+    "description": "Tehtävässä tarkastellaan heliumilla täytettyä ilmapalloa.",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q4.1",
+    "title": "K25: 4.1 Heliumilla täytetty pallo on paikallaan huoneen katossa. Piirrä pallon voimakuvio.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q4.2",
+    "title": "K25: 4.2 Kuinka suuren voiman katto kohdistaa palloon, kun pallo on paikallaan huoneen katossa?",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q4.3",
+    "title": "K25: 4.3 Kuinka suuri ilmanvastus palloon kohdistuu juuri ennen kuin pallo osuu kattoon?",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q5.0",
+    "title": "K25: 5. Nosturi",
+    "material": {
+      "url": "https://yle.fi/plus/abitreenit/2025/kevat/fysiikka/attachments/index.html#5",
+      "label": "5.A"
+    },
+    "description": "Telaketjunosturilla nostetaan tiilikuormaa, jonka massa on 320 kg. Auton massa ilman puomia on 3 200 kg. Puomin massa on 220 kg.",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q5.1",
+    "title": "K25: 5.1 Kuinka suurilla voimilla telaketjut A ja B kuormittavat maaperää?",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q5.2",
+    "title": "K25: 5.2 Jos puomia pidennetään liikaa, nosturi kaatuu. Miksi? Mitä osia nosturiin voisi lisätä, jotta se ei kaatuisi?",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q6.0",
+    "title": "K25: 6. Virtamittarit",
+    "material": {
+      "url": "https://yle.fi/plus/abitreenit/2025/kevat/fysiikka/attachments/index.html#6",
+      "label": "6.A, 6.B"
+    },
+    "description": "Virtapiirillä voidaan määrittää todellisen virtamittarin sisäinen resistanssi.",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q6.1",
+    "title": "K25: 6.1 Miten virtamittari tulee kytkeä virtapiiriin? Perustele vastaus Kirchhoffin virtalain avulla.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q6.2",
+    "title": "K25: 6.2 Johda lauseke virtamittarin läpi kulkevalle sähkövirralle I₀:n, Rₓ:n ja Rₘ:n avulla.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q6.3",
+    "title": "K25: 6.3 Miten voit määrittää kuvaajan avulla virtamittarin sisäisen resistanssin? Merkitse kuvaajaan 6.B, mistä kohdasta virtamittarin sisäinen resistanssi luetaan.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q7.0",
+    "title": "K25: 7. Valo",
+    "description": "Oikea vastaus 2–3 p., väärä vastaus 0 p., ei vastausta 0 p.",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q7.1",
+    "title": "K25: 7.1 Valon nopeus lasissa on ___ kuin valon nopeus ilmassa.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q7.2",
+    "title": "K25: 7.2 Valon taajuus lasissa on ___ kuin valon taajuus ilmassa.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q7.3",
+    "title": "K25: 7.3 Punaisella valolla on tyhjiössä suurempi ___ kuin sinisellä valolla. (Kirjoita yksi sana)",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q7.4",
+    "title": "K25: 7.4 Valonsäde tulee ilmasta ilman ja lasin rajapintaan. Osa valosta jatkaa matkaansa ilmassa. Ilmiö on nimeltään ___. (Kirjoita yksi sana)",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q7.5",
+    "title": "K25: 7.5 Rajapinnan läpäiseminen muuttaa valon kulkusuuntaa. Ilmiö on nimeltään ___. (Kirjoita yksi sana)",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q7.6",
+    "title": "K25: 7.6 Lasista tehdyn prisman avulla auringonvalo voidaan hajottaa väreihin, koska lasin ___ riippuu valon aallonpituudesta. (Kirjoita yksi sana)",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q7.7",
+    "title": "K25: 7.7 Hilan avulla auringonvalo voidaan hajottaa väreihin, koska ___ riippuu valon aallonpituudesta. (Kirjoita yksi sana)",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q8.0",
+    "title": "K25: 8. Alfahajoaminen",
+    "material": {
+      "url": "https://yle.fi/plus/abitreenit/2025/kevat/fysiikka/attachments/index.html#8",
+      "label": "8.A"
+    },
+    "description": "Suomalainen saa keskimäärin yli 60 % säteilyannoksestaan alfasäteilystä, joka on peräisin radonkaasusta. Säteilyannoksen aiheuttaja on Rn-222-isotooppi, jonka puoliintumisaika on 3,8 vuorokautta.",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q8.1",
+    "title": "K25: 8.1 Kirjoita Rn-222:n alfahajoamisen hajoamisyhtälö.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q8.2",
+    "title": "K25: 8.2 Miksi radonkaasu aiheuttaa merkittävän säteilyannoksen, vaikka sen lähettämä alfasäteily pysähtyy jo esimerkiksi paperiin?",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q8.3",
+    "title": "K25: 8.3 Laske Rn-222:n alfahajoamisreaktiossa vapautuva energia. Millaisena energiana vapautuva energia ilmenee heti hajoamisen jälkeen?",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q9.0",
+    "title": "K25: 9. Kaasusylinteri",
+    "material": {
+      "url": "https://yle.fi/plus/abitreenit/2025/kevat/fysiikka/attachments/index.html#9",
+      "label": "9.A"
+    },
+    "description": "Kuvan laitteessa on läpinäkyvä sylinteri, jossa liikkuu tiivis mäntä. Sylinterissä olevan kaasun tilavuutta, painetta ja lämpötilaa mitataan tietokoneella.",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q9.1.1",
+    "title": "K25: 9.1.1 Vaihe 1: Miten ilman paine käyttäytyy? Selitä muiden suureiden mittaustulosten ja tilanteeseen sopivan kaasulain avulla.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q9.1.2",
+    "title": "K25: 9.1.2 Vaihe 1: Selitä termodynamiikan pääsäännön avulla, kuinka ilman sisäenergia käyttäytyy.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q9.2.1",
+    "title": "K25: 9.2.1 Vaihe 2: Miten ilman lämpötila käyttäytyy? Miksi lämpötila käyttäytyy havaitulla tavalla?",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q9.2.2",
+    "title": "K25: 9.2.2 Vaihe 2: Selitä termodynamiikan pääsäännön avulla, kuinka ilman sisäenergia käyttäytyy.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q9.3.1",
+    "title": "K25: 9.3.1 Vaihe 3: Selitä termodynamiikan pääsäännön avulla, kuinka ilman sisäenergia käyttäytyy.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q9.3.2",
+    "title": "K25: 9.3.2 Vaihe 3: Miten ilman lämpötila käyttäytyy? Miksi lämpötila käyttäytyy havaitulla tavalla?",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q9.4.1",
+    "title": "K25: 9.4.1 Vaihe 4: Miten paine käyttäytyy? Selitä paineen käyttäytyminen muiden suureiden mittaustulosten ja tilanteeseen sopivan kaasulain avulla.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q10.0",
+    "title": "K25: 10. Ulvova ääniputki",
+    "material": {
+      "url": "https://yle.fi/plus/abitreenit/2025/kevat/fysiikka/attachments/index.html#10",
+      "label": "10.A, 10.B"
+    },
+    "description": "Putki on avoin molemmista päistä, ja sen pituus on 85,4 cm. Äänen nopeus ilmassa on 343 m/s.",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q10.1",
+    "title": "K25: 10.1 Tarkastele putken sisällä olevaa ilmaa. Liikkuuko ilma pyörittäjää kohti, pyörittäjästä poispäin vai edestakaisin? Perustele vastauksesi.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q10.2",
+    "title": "K25: 10.2 Määritä ominaistaajuuksien kertaluvut käyttäen sopivaa fysikaalista mallia.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q10.3",
+    "title": "K25: 10.3 Kun putkea pyöritetään nopeammin, määritä ominaistaajuuksien kertaluvut. Laske, paljonko putki on venynyt.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q10.4",
+    "title": "K25: 10.4 Miksi ominaistaajuudet ovat siirtyneet korkeammille taajuuksille?",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q10.5",
+    "title": "K25: 10.5 Johda lauseke, josta ilmenee, kuinka mones yläsävel putkessa soi, kun putken sisällä virtaavan ilman nopeus on u.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q11.0",
+    "title": "K25: 11. DART-luotain",
+    "material": {
+      "url": "https://yle.fi/plus/abitreenit/2025/kevat/fysiikka/attachments/index.html#11",
+      "label": "11.A"
+    },
+    "description": "Vuonna 2021 Nasan DART-luotain törmäytettiin suurella nopeudella Didymos-asteroidia kiertävään pieneen kuuhun tarkoituksena muuttaa kuun kiertorataa.",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q11.1",
+    "title": "K25: 11.1 Laske kiertoajan perusteella kuun ratanopeus ennen törmäystä.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q11.2",
+    "title": "K25: 11.2 Määritä kuun kiertoajan muutoksen perusteella sen ratanopeuden muutos.",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q11.3",
+    "title": "K25: 11.3 Laske ennuste ratanopeuden muutokselle täysin kimmottomassa törmäyksessä. Kuinka moninkertainen havaittu ratanopeuden muutos on ennusteeseen verrattuna?",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
+  },
+  {
+    "id": "K25 q11.4",
+    "title": "K25: 11.4 Mistä aiheutuu ennusteen ja havainnon välinen ero?",
+    "description": "",
+    "isK25": true,
+    "isCompleted": false
   }
 
 	];
@@ -779,7 +1175,9 @@
          window.open("https://drive.google.com/file/d/12UxfOG6F7nIE2wsc9GG8gDgxF0t-UXdE/view", '_blank').focus();
 		} else if (currentQuestion.isK24 == true) {
          window.open("https://yle.fi/plus/abitreenit/2024/kevat/fysiikka/fysiikka_hvp_lopulliset.pdf", '_blank').focus();
-		}
+		} else if (currentQuestion.isK25 == true) {
+         window.open("https://yle.fi/plus/abitreenit/2025/kevat/fysiikka/hvp_lopullinen.pdf", '_blank').focus();	
+		}		
 	}
 
 
@@ -806,11 +1204,165 @@
 		'video-placeholder', 'iframe-placeholder', 'underline', 'subscript', 
 		'heading1', 'heading2', 'bold', 'alignCenter', 'font increment', 'undo', 'redo', 'italic'
 	];
+
+// --- Data export / backup helpers ---
+/**
+ * Gather all relevant data for export: current `questions` array and all localStorage entries.
+ */
+function getAllDataForExport() {
+	const stored: Record<string, string> = {};
+ 	for (let i = 0; i < localStorage.length; i++) {
+ 		const k = localStorage.key(i);
+ 		if (k) stored[k] = localStorage.getItem(k) as string;
+ 	}
+
+ 	return {
+ 		meta: {
+ 			exportedAt: new Date().toISOString(),
+ 			app: 'Fysiikan Yo Kone'
+ 		},
+ 		questions,
+ 		localStorage: stored
+ 	};
+}
+
+function downloadBlob(filename: string, blob: Blob) {
+ 	const url = URL.createObjectURL(blob);
+ 	const a = document.createElement('a');
+ 	a.href = url;
+ 	a.download = filename;
+ 	document.body.appendChild(a);
+ 	a.click();
+ 	a.remove();
+ 	URL.revokeObjectURL(url);
+}
+
+/** Export helpers called from UI */
+function exportAsJSON() {
+ 	const data = getAllDataForExport();
+ 	const json = JSON.stringify(data, null, 2);
+ 	downloadBlob(`fy-export-${Date.now()}.json`, new Blob([json], { type: 'application/json' }));
+}
+
+function exportAsTxt() {
+ 	const data = getAllDataForExport();
+ 	// Create a readable text summary for quick inspection
+ 	let txt = `Exported: ${data.meta.exportedAt}\nApp: ${data.meta.app}\n\n`;
+ 	txt += `Questions: ${data.questions.length} entries\n\n`;
+ 	for (const q of data.questions) {
+ 		txt += `${q.id} - ${q.title} - completed: ${q.isCompleted ? 'yes' : 'no'}\n`;
+ 	}
+ 
+ 	txt += `\n--- localStorage (keys/length) ---\n`;
+ 	for (const k of Object.keys(data.localStorage)) {
+ 		txt += `${k} -> ${String(data.localStorage[k]).slice(0, 200)}${String(data.localStorage[k]).length > 200 ? '...': ''}\n`;
+ 	}
+
+ 	downloadBlob(`fy-export-${Date.now()}.txt`, new Blob([txt], { type: 'text/plain' }));
+}
+
+// --- Editor-specific exports (only keys that store editor content) ---
+function getEditorStorageKeys(suffix = ':edra-content') {
+	const keys: string[] = [];
+	for (let i = 0; i < localStorage.length; i++) {
+		const k = localStorage.key(i);
+		if (k && k.endsWith(suffix)) keys.push(k);
+	}
+	return keys;
+}
+
+function getEditorContents() {
+	const keys = getEditorStorageKeys();
+	const result: Record<string, any> = {};
+	for (const k of keys) {
+		try {
+			const raw = localStorage.getItem(k);
+			result[k] = raw ? JSON.parse(raw) : null;
+		} catch (e) {
+			result[k] = localStorage.getItem(k);
+		}
+	}
+	return result;
+}
+
+function exportEditorContentsAsJSON() {
+	const contents = getEditorContents();
+	const payload = {
+		meta: { exportedAt: new Date().toISOString(), note: 'Editor contents only' },
+		contents
+	};
+	downloadBlob(`fy-editor-contents-${Date.now()}.json`, new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' }));
+}
+
+function exportEditorContentsAsTxt() {
+	const contents = getEditorContents();
+	let txt = `Exported editor contents: ${new Date().toISOString()}\n\n`;
+	for (const key of Object.keys(contents)) {
+		const editorId = key.split(':')[0];
+		txt += `Key: ${key} (editorId: ${editorId})\n`;
+		try {
+			txt += JSON.stringify(contents[key], null, 2) + '\n\n';
+		} catch (e) {
+			txt += String(contents[key]) + '\n\n';
+		}
+	}
+	downloadBlob(`fy-editor-contents-${Date.now()}.txt`, new Blob([txt], { type: 'text/plain' }));
+}
+
+/**
+ * Minimal helper to save the exported JSON into a Supabase table using the REST API.
+ * NOTE: This requires a table (for example `exports`) with a JSON/text column (for example `payload`) on your Supabase database.
+ * You must provide SUPABASE_URL and SUPABASE_KEY (service role or anon) when calling.
+ */
+async function saveExportToSupabase(supabaseUrl: string, supabaseKey: string, table = 'exports') {
+ 	const data = getAllDataForExport();
+ 	// Payload sent as a JSON string in a column named `payload`.
+ 	const body = JSON.stringify({ payload: JSON.stringify(data) });
+
+ 	const res = await fetch(`${supabaseUrl.replace(/\/$/, '')}/rest/v1/${table}`, {
+ 		method: 'POST',
+ 		headers: {
+ 			'apikey': supabaseKey,
+ 			'Authorization': `Bearer ${supabaseKey}`,
+ 			'Content-Type': 'application/json',
+ 			'Prefer': 'return=representation'
+ 		},
+ 		body
+ 	});
+
+ 	if (!res.ok) {
+ 		const text = await res.text();
+ 		throw new Error(`Supabase save failed: ${res.status} ${text}`);
+ 	}
+
+ 	return res.json();
+}
+
+/**
+ * UI helper to prompt for Supabase details and upload the export.
+ * This is intentionally lightweight — in a production app store keys securely and use server-side functions.
+ */
+async function promptAndUploadSupabase() {
+ 	const url = prompt('Enter SUPABASE_URL (eg https://xyzcompany.supabase.co)');
+ 	if (!url) return alert('Supabase URL required');
+ 	const key = prompt('Enter SUPABASE_KEY (anon or service role)');
+ 	if (!key) return alert('Supabase key required');
+ 	const table = prompt('Enter target table name (default: exports)') || 'exports';
+
+ 	try {
+ 		const result = await saveExportToSupabase(url, key, table);
+ 		console.log('Saved to Supabase:', result);
+ 		alert('Export saved to Supabase (check console for details)');
+ 	} catch (err) {
+ 		console.error(err);
+ 		alert('Failed to save to Supabase: ' + String(err));
+ 	}
+}
 </script>
 
 <div class="container">
 	<h1>Fysiikan Yo Kone</h1>
-	<p class="subtitle">Question {currentQuestionIndex + 1} of {questions.length}</p>
+	<p class="subtitle">Kysymys {currentQuestionIndex + 1} / {questions.length}</p>
 
 	<!-- Progress bar -->
 	<div class="progress-container">
@@ -843,7 +1395,13 @@
 				/>
 			{/key}
 		</div>
-		<button id="checkButton" on:click={checkAnswer}>Katso vastaus</button>
+		<div class="button-row">
+			<button id="checkButton" on:click={checkAnswer}>Katso vastaus</button>
+			<!-- <button type="button" class="export-btn" on:click={exportAsJSON}>Export JSON</button>
+			<button type="button" class="export-btn" on:click={exportAsTxt}>Export TXT</button> -->
+			<button type="button" class="export-btn" on:click={exportEditorContentsAsJSON}>Export JSON</button>
+			<button type="button" class="export-btn" on:click={exportEditorContentsAsTxt}>Export TXT</button>
+		</div>
 	</div>
 
 	<!-- Navigation buttons -->
@@ -1132,23 +1690,43 @@
 	}
 
 	#checkButton {
-	 border: 1px solid black;
-	 margin-top: 8px;
+
 	 text-align: center;
 	 border-radius: 8px;
 	 color: #f1f8f4;
 	 background-color: #4CAF50;
 	 padding: 8px;
+	font-weight: 600;
 	}
 
 	#checkButton:hover {
 		border: 1px solid white;
-		margin-top: 8px;
 		text-align: center;
 		border-radius: 8px;
 		color: #f1f8f4;
 		background-color: #09eb11;
 		padding: 8px;
+	}
+
+	.button-row {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		margin-top: 8px;
+	}
+
+	.export-btn {
+		border: 1px solid #1976d2;
+		background: #1976d2;
+		color: #fff;
+		padding: 8px 10px;
+		border-radius: 8px;
+		cursor: pointer;
+		font-weight: 600;
+	}
+
+	.export-btn:hover {
+		background: #1565c0;
 	}
 
 
