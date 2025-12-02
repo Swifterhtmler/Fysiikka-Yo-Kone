@@ -1531,7 +1531,7 @@ async function promptAndUploadSupabase() {
 					<div class="sub-question-item">
 						<div class="sub-question-header">
 							<h4 class:completed={subQuestion.isCompleted}>
-								{subQuestion.id} - {subQuestion.title.split('.').slice(1).join('.')}
+							  {subQuestion.title.split('.').slice(1).join('.')}
 								{#if subQuestion.isCompleted}
 									<span class="completion-badge">✓ Valmis</span>
 								{/if}
