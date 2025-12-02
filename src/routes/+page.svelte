@@ -1171,6 +1171,16 @@
 	$: completedCount = questions.filter(q => q.isCompleted).length;
  //  let isCorrect = false;
 	
+	// Group questions by parent number (e.g., "10" for 10.0, 10.1, 10.2)
+	function getQuestionGroup(questionId: string): string {
+		// Extract exam year and question number from IDs like "K25 q10.0" -> "K25 10"
+		const yearMatch = questionId.match(/^([A-Z]\d+)\s+q(\d+)\./);
+		if (yearMatch) {
+			return `${yearMatch[1]} ${yearMatch[2]}`;
+		}
+		return questionId;
+	}
+	
    function checkAnswer() {
 		
 		currentQuestion.isCompleted = true;
@@ -1473,8 +1483,8 @@ async function promptAndUploadSupabase() {
 
 <div class="container">
 
-<!-- 
-	<div class="content-menu-top-bar-container">
+
+	<!-- <div class="content-menu-top-bar-container">
 		<a class="content-menu-top-bar-container-timer" href="/pomodoro">Pomodoro timer</a>
 		<nutton type="button" class="content-menu-top-bar-container-button">Käyttöohje</nutton>
 	</div> -->
@@ -1490,7 +1500,7 @@ async function promptAndUploadSupabase() {
 		<div class="progress-bar" style="width: {((currentQuestionIndex + 1) / questions.length) * 100}%"></div>
 	</div>
 
-	<!-- Question card -->
+	<!-- Question card with accordion -->
 	<div class="question-card">
 		<div class="question-header">
 			<h3 class="question-title">
@@ -1505,28 +1515,55 @@ async function promptAndUploadSupabase() {
 				<p class="question-description">{currentQuestion.description}</p>
 			{/if}
 		</div>
-		
-		<div class="editor-container">
-			{#key currentQuestion.id}
-				<EditorWrapper 
-					editorId={currentQuestion.id}
-					excludedCommands={excludedCmds} 
-					imagexasizewidth={500} 
-					imagemaxsizeheight={350} 
-				/>
-			{/key}
-		</div>
-		<div class="button-row">
-			<button id="checkButton" on:click={checkAnswer}>Katso vastaus</button>
-			<!-- <button type="button" class="export-btn" on:click={exportAsJSON}>Export JSON</button>
-			<button type="button" class="export-btn" on:click={exportAsTxt}>Export TXT</button> -->
-			<button type="button" class="export-btn" on:click={exportEditorContentsAsJSON}>Export JSON</button>
-			<button type="button" class="export-btn" on:click={exportEditorContentsAsTxt}>Export TXT</button>
-			<!-- <button type="button" class="export-btn" on:click={clearCompletedQuestions}>Clear Completed</button> -->
-			<span class="completion-status">
-				{completedCount}/{questions.length} Tehty
-			</span>
-		</div>
+
+		<!-- Show all sub-questions with their own editors -->
+		{#if currentQuestion}
+			{@const currentGroup = getQuestionGroup(currentQuestion.id)}
+			{@const groupQuestions = questions.filter(q => getQuestionGroup(q.id) === currentGroup).sort((a, b) => a.id.localeCompare(b.id))}
+			
+			<div class="group-header">
+				<!-- <h3>📋 Kaikki alakysymykset (Ryhmä {currentGroup})</h3> -->
+				<p class="group-info">{groupQuestions.length} kysymystä tässä ryhmässä</p>
+			</div>
+
+			<div class="sub-questions-container">
+				{#each groupQuestions as subQuestion, idx}
+					<div class="sub-question-item">
+						<div class="sub-question-header">
+							<h4 class:completed={subQuestion.isCompleted}>
+								{subQuestion.id} - {subQuestion.title.split('.').slice(1).join('.')}
+								{#if subQuestion.isCompleted}
+									<span class="completion-badge">✓ Valmis</span>
+								{/if}
+							</h4>
+							{#if subQuestion.description}
+								<p class="sub-question-description">{subQuestion.description}</p>
+							{/if}
+						</div>
+						
+						<div class="editor-container">
+							{#key subQuestion.id}
+								<EditorWrapper 
+									editorId={subQuestion.id}
+									excludedCommands={excludedCmds} 
+									imagexasizewidth={500} 
+									imagemaxsizeheight={350} 
+								/>
+							{/key}
+						</div>
+
+						<button 
+							class="check-answer-btn"
+							on:click={() => {
+								currentQuestionIndex = questions.indexOf(subQuestion);
+								checkAnswer();
+							}}>
+							Katso vastaus
+						</button>
+					</div>
+				{/each}
+			</div>
+		{/if}
 	</div>
 
 	<!-- Navigation buttons -->
@@ -1911,5 +1948,101 @@ async function promptAndUploadSupabase() {
 		margin-bottom: 10px;
 	}
 
+	/* Group layout styles */
+	.group-header {
+		margin-bottom: 30px;
+		padding-bottom: 20px;
+		border-bottom: 3px solid #1976d2;
+	}
+
+	.group-header h3 {
+		margin: 0 0 10px 0;
+		font-size: 1.5rem;
+		color: #333;
+	}
+
+	.group-info {
+		margin: 0;
+		color: #666;
+		font-size: 0.95rem;
+	}
+
+	.sub-questions-container {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.sub-question-item {
+		background-color: #f9f9f9;
+		border: 1px solid #ddd;
+		border-radius: 8px;
+		padding: 20px;
+		transition: all 0.3s ease;
+	}
+
+	.sub-question-item:hover {
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+		border-color: #1976d2;
+	}
+
+	.sub-question-header {
+		margin-bottom: 20px;
+		padding-bottom: 15px;
+		border-bottom: 2px solid #e0e0e0;
+	}
+
+	.sub-question-header h4 {
+		margin: 0 0 8px 0;
+		font-size: 1.1rem;
+		color: #333;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	.sub-question-header h4.completed {
+		color: #4CAF50;
+	}
+
+	.completion-badge {
+		display: inline-block;
+		background-color: #4CAF50;
+		color: white;
+		padding: 4px 8px;
+		border-radius: 4px;
+		font-size: 0.85rem;
+		font-weight: 600;
+	}
+
+	.sub-question-description {
+		margin: 0;
+		color: #666;
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	.check-answer-btn {
+		background-color: #4CAF50;
+		color: white;
+		border: none;
+		padding: 10px 20px;
+		border-radius: 6px;
+		cursor: pointer;
+		font-weight: 600;
+		font-size: 0.95rem;
+		transition: all 0.2s ease;
+		margin-top: 15px;
+	}
+
+	.check-answer-btn:hover {
+		background-color: #45a049;
+		box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+	}
+
+	.check-answer-btn:active {
+		transform: translateY(1px);
+	}
 
 </style>
+```
