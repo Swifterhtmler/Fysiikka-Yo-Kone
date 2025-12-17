@@ -1519,7 +1519,7 @@ async function promptAndUploadSupabase() {
 		<!-- Show all sub-questions with their own editors -->
 		{#if currentQuestion}
 			{@const currentGroup = getQuestionGroup(currentQuestion.id)}
-			{@const groupQuestions = questions.filter(q => getQuestionGroup(q.id) === currentGroup).sort((a, b) => a.id.localeCompare(b.id))}
+			{@const groupQuestions = questions.filter(q => getQuestionGroup(q.id) === currentGroup && !q.id.endsWith('.0')).sort((a, b) => a.id.localeCompare(b.id))}
 			
 			<div class="group-header">
 				<!-- <h3>📋 Kaikki alakysymykset (Ryhmä {currentGroup})</h3> -->
@@ -1577,7 +1577,8 @@ async function promptAndUploadSupabase() {
 		</button>
 		
 		<div class="question-selector">
-			<select bind:value={currentQuestionIndex} class="question-dropdown">
+			<label for="question-select" class="sr-only">Valitse kysymys</label>
+			<select id="question-select" bind:value={currentQuestionIndex} class="question-dropdown" aria-label="Valitse kysymys">
 				{#each questions as question, index}
 					<option value={index}>
 						{question.id.toUpperCase()} - {question.title.split('.')[0]}.{question.title.split('.')[1]?.split(' ')[0] || ''}
@@ -1595,6 +1596,7 @@ async function promptAndUploadSupabase() {
 		</button>
 	</div>
 
+
 	<!-- Question grid for quick navigation -->
 	<div class="question-grid">
 		{#each questions as question, index}
@@ -1610,6 +1612,16 @@ async function promptAndUploadSupabase() {
 			</button>
 		{/each}
 	</div>
+		<div class="button-row">
+			<!-- <button type="button" class="export-btn" on:click={exportAsJSON}>Export JSON</button>
+			<button type="button" class="export-btn" on:click={exportAsTxt}>Export TXT</button> -->
+			<button type="button" class="export-btn" on:click={exportEditorContentsAsJSON}>Export JSON</button>
+			<button type="button" class="export-btn" on:click={exportEditorContentsAsTxt}>Export TXT</button>
+			<!-- <button type="button" class="export-btn" on:click={clearCompletedQuestions}>Clear Completed</button> -->
+			<span class="completion-status">
+				{completedCount}/{questions.length} Tehty
+			</span>
+		</div>
 </div>
 
 
@@ -1770,6 +1782,19 @@ async function promptAndUploadSupabase() {
 		box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
 	}
 
+	/* Visually hidden label for accessibility */
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
 	.question-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
@@ -1851,31 +1876,18 @@ async function promptAndUploadSupabase() {
 		}
 	}
 
-	#checkButton {
 
-	 text-align: center;
-	 border-radius: 8px;
-	 color: #f1f8f4;
-	 background-color: #4CAF50;
-	 padding: 8px;
-	font-weight: 600;
-	}
-
-	#checkButton:hover {
-		border: 1px solid white;
-		text-align: center;
-		border-radius: 8px;
-		color: #f1f8f4;
-		background-color: #09eb11;
-		padding: 8px;
-	}
 
 	.button-row {
 		display: flex;
 		gap: 8px;
 		align-items: center;
-		margin-top: 8px;
+		margin-top: 20px;
 		flex-wrap: wrap;
+		background-color: rgb(255, 255, 255);
+		padding: 10px;
+		border-radius: 10px;
+		
 	}
 
 	.export-btn {
@@ -1899,7 +1911,7 @@ async function promptAndUploadSupabase() {
 		background-color: #f1f8f4;
 		border-radius: 4px;
 		border: 1px solid #4CAF50;
-	}
+	} 
 /* 
 
 	.content-menu-top-bar-container {
@@ -1934,9 +1946,9 @@ async function promptAndUploadSupabase() {
 	} */
 
 
-	.export-btn:hover {
+	 .export-btn:hover {
 		background: #1565c0;
-	}
+	} 
 
 
 	.top-bar-container {
@@ -1955,11 +1967,11 @@ async function promptAndUploadSupabase() {
 		border-bottom: 3px solid #1976d2;
 	}
 
-	.group-header h3 {
+	/* .group-header h3 {
 		margin: 0 0 10px 0;
 		font-size: 1.5rem;
 		color: #333;
-	}
+	} */
 
 	.group-info {
 		margin: 0;
@@ -2045,4 +2057,3 @@ async function promptAndUploadSupabase() {
 	}
 
 </style>
-```
