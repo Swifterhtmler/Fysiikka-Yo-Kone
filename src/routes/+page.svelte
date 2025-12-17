@@ -1435,26 +1435,27 @@ async function promptAndUploadSupabase() {
 <svelte:head>
   <meta charset="UTF-8" />
 
-    <meta name="description" content="Fysiikan Yo kone on suunniteltu fysiikan yo kirjoittajille ja toimii abitreenien yokoneen tavoin mutta tukee myös LaTeX ladontaa.">
-
-    <meta name="keywords" content="Yokokeet, Abitreenit, YoKone,Yo kone, yo kone, fysiikka, fysiikan yo koe, fysiikan luku, fysiikak yo kertaus, mafynetti, maol, fysiikan kertaus, ">
+    <!-- <meta name="description" content="Fysiikan Yo kone on suunniteltu fysiikan yo kirjoittajille ja toimii abitreenien yokoneen tavoin mutta tukee myös LaTeX ladontaa."> -->
+   <meta name="description" content="Fysiikan YO-kone: ilmainen harjoittelutyökalu ylioppilaskirjoittajille. Tukee LaTeX-ladontaa ja simuloi oikeaa YO-koetta. Täydellinen fysiikan abikertaukseen.">
+    <meta name="keywords" content="Yokokeet, Abitreenit, YoKone,Yo kone, yo koe, yo harjoittely, yo kertaus, ylioppilaskoe, yo kone, fysiikka, fysiikan yo koe, fysiikan luku, fysiikak yo kertaus, mafynetti, maol, fysiikan kertaus,fysiikan yo koe, fysiikka yo, yo, fysiikan ylioppilaskoe, fysiikan yo kertaus, fysiikka yo, fysiikka yo kertaus, fysiikka kertaus, fysiikka, ydin fysiikka, ylioppilaskoe, yo-kertays, abitreenit, abi, abijarjoittelu, abiturientti, yokoe, yokokeet, lukio,lukiolaisille,lukio opiskelu,fysiikan lukio, teknillinen, engineering,fysiikka yo kone, Fysiikka YO kone,yo-kone, Yo-kone, abit, fysiika yo koe, fyiikka yo, fysikka yo koe, fysikka yo, kertaus, yo harjoittelu, ylioppilaskoe harjoittelu,opiskelu, teknillinen korkeakoulu, yliopisto kertaus, yo prep, yo preppaus, preppaaminen, kertaus, fysiikan harjoittelu, harjoitus, fysiikan harjoitus, kone ">
     <meta property="og:title" content="Fysiikan ylioppilaskoe treeni">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Fysiikan ylioppilaskoe treenaus yo koe koneen avulla" />
-  
+  <meta property="og:locale" content="fi_FI">
+  <meta property="og:url" content="https://fysiikka-yo-kone.vercel.app">
   <!-- Google search console verification tag -->
 
+  <link rel="preconnect" href="https://cloud.umami.is">
+
 	 <meta name="google-site-verification" content="Jr9bVmoylSADwZ-Qlsqqj7XAI2Qb5p6vqM-EMFyFpWM" />
- 
+ <link rel="canonical" href="https://fysiikka-yo-kone.vercel.app">
    
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Fysiikan Yo Kone</title>
-
-   <!--- Umami Analytics -->
+<title>Fysiikan YO-kone - Ylioppilaskokeen Harjoittelutyökalu</title>
+   <!--- Umami Analytics  -->
 	  
 	<script defer src="https://cloud.umami.is/script.js" data-website-id="dbaa4df0-a42d-43b7-961f-56be29f47131"></script>
 
-	<!-- Speculation Rules for prerender and prefetch -->
 	<script type="speculationrules">
 		{
 			"prerender": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }],
@@ -1464,19 +1465,24 @@ async function promptAndUploadSupabase() {
 	
 
 	<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"name": "Fysiikan Yo Kone",
-			"description": "Fysiikan ylioppilaskokeen harjoittelukone",
-			"url": "https://fysiikka-yo-kone.vercel.app"
-		}
-	</script>
-
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Fysiikan YO-kone",
+  "description": "Fysiikan ylioppilaskokeen harjoittelukone abiturienteille",
+  "url": "https://fysiikka-yo-kone.vercel.app",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "inLanguage": "fi"
+}
+</script>
 
 </svelte:head>
-
-
-
 
 
 
