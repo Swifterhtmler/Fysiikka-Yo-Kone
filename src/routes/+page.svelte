@@ -1647,6 +1647,15 @@ async function promptAndUploadSupabase() {
 		padding: 20px;
 	}
 
+	@media(max-width: 600px) {
+		.container {
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 20px;
+		overflow-x: hidden;
+	}
+	}
+
 	h1 {
 		text-align: center;
 		margin-bottom: 10px;
