@@ -1723,10 +1723,11 @@ async function promptAndUploadSupabase() {
 	}
 
 	.editor-container {
-		width: auto;
+		width: 100%;
 		height: auto;
 		border: 1px solid #ddd;
 		border-radius: 4px;
+		overflow: hidden;
 	}
 
 	.navigation {
